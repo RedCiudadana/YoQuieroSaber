@@ -1,0 +1,16 @@
+{{!-- Sección de comentarios --}}
+<div class="row">
+  <div class="col-12">
+    <div class="panel">
+      <div class="header d-flex">
+        <img src="mi-guatemala/img/icon-comments.png" alt="Comentarios">
+        <h3>Comentarios</h3>
+      </div>
+      <div class="body">
+        {{#if disqusShortname}}
+          {{disqus-comments identifier=disqusIdentifier}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>

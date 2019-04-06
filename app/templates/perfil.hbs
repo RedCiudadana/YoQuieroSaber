@@ -1,0 +1,12 @@
+{{!-- HTML title: 'Nombres Apellidos' --}}
+{{title model.profile.nombre replace=true}}
+
+<section class="container profile my-4">
+
+  {{profile-functionalities model=model}}
+
+  {{outlet}}
+
+  {{disqus-panel model=model}}
+
+</section>

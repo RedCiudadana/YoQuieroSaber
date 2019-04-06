@@ -1,0 +1,37 @@
+{{#bs-navbar backgroundColor="white" type="light" position="sticky-top" fluid=false as |navbar|}}
+  <div class="navbar-header">
+    {{navbar.toggle}}
+
+    {{#link-to "application" class="navbar-brand"}}
+      <img
+        src="logo-brand.png"
+        class="img-responsive"
+        title={{nombreApp}}
+        alt="MiSalud">
+    {{/link-to}}
+  </div>
+
+  {{#navbar.content}}
+    {{#navbar.nav justified=true type="pills" class="ml-auto" as |nav|}}
+      {{!-- Navbar links --}}
+      {{#each model.navbarLinks as |link|}}
+        {{#nav.item active=false class="mx-2 my-3 my-md-auto"}}{{#link-to link.route}}{{link.title}}{{/link-to}}{{/nav.item}}
+      {{/each}}
+
+      {{!-- Twitter --}}
+      {{#nav.item active=false}}
+        <a href="https://twitter.com/RedxGuate" class="border-0 social fb">
+          <img src="mi-guatemala/img/icon-fb-gray.png" alt="">
+        </a>
+      {{/nav.item}}
+
+      {{!-- Facebook --}}
+      {{#nav.item active=false}}
+        <a href="https://twitter.com/RedxGuate" class="border-0 social tw">
+          <img src="mi-guatemala/img/icon-tw-gray.png" alt="">
+        </a>
+      {{/nav.item}}
+
+    {{/navbar.nav}}
+  {{/navbar.content}}
+{{/bs-navbar}}
