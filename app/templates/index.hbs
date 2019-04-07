@@ -1,14 +1,15 @@
 {{!-- Slider --}}
 {{!-- En pantalla pequeña --}}
+
 <div
   class="slider d-block d-sm-none text-center"
   style="background-image: url('img/slider-sm.png'); background-size: cover;">
   <div class="container container-padding">
     <div class="row">
       <div class="col-10 text-center offset-1">
-        <h1 class="text-dark">¡Tejiendo Salud!</h1>
+        <h1 class="text-dark">Acceso a la Información Pública</h1>
         <p class="text-soft">
-          Visualizá y compará indicadores de los Hospitales y Centros de salud de Guatemala.
+          Elegí el organismo y formulá tu pregunta. El sistema le da formato y envía tu consulta. La respuesta llega a vos y queda registrada.
         </p>
         <button class="btn btn-success rounded">
           Más información
@@ -24,9 +25,9 @@
   <div class="container container-padding">
     <div class="row">
       <div class="col-sm-8 col-lg-5 text-left">
-        <h1>¡Tejiendo Salud!</h1>
+        <h1>Acceso a la Información Pública</h1>
         <p>
-          Visualizá y compará indicadores de los Hospitales y Centros de salud de Guatemala.
+          Elegí el organismo y formulá tu pregunta. El sistema le da formato y envía tu consulta. La respuesta llega a vos y queda registrada.
         </p>
         <button class="btn btn-success rounded">
           Más información
@@ -45,7 +46,7 @@
           options=model.hospitals
           searchField="nombre"
           onchange=(action "selectProfile")
-          placeholder="Buscar hospital o centro de salud."
+          placeholder="Buscar Municipalidad."
           class="form-control"
           as |hospital|
         }}
@@ -59,14 +60,6 @@
         {{one-way-select
           options=departments
           update=(queue (action (mut selectedDepartment)) (action "applyFilter"))
-          class="form-control"
-        }}
-      </div>
-      <div class="col-10 offset-1 col-md-4 offset-md-0 filters">
-        {{!-- Hospital/Centro de salud --}}
-        {{one-way-select
-          options=types
-          update=(queue (action (mut selectedType)) (action "applyFilter"))
           class="form-control"
         }}
       </div>
